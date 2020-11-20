@@ -1,4 +1,4 @@
-let prod = 'dist';
+let prod = 'docs';
 let source = 'src';
 
 let fs = require('fs');
