@@ -1,0 +1,16 @@
+.partners {
+  &__title-h2 {
+    margin-bottom: 4rem;
+  }
+  &__items {
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: baseline;
+    outline: none;
+    text-align: center;
+  }
+}

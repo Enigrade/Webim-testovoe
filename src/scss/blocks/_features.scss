@@ -1,0 +1,57 @@
+.features {
+  background-color: #F5FBFD;
+  &__title-h2 {
+    font: 700 2.25rem/2.8125rem Sunflower, san-serif;
+    color: #305F6D;
+    text-align: center;
+    margin-bottom: 1.5625rem;
+  }
+  &__subtitle {
+    margin-bottom: 4.3125rem;
+    text-align: center;
+  }
+  &__items {
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    border-top: 1px solid rgba(139,159,166, .3);
+    text-align: left;
+    &-desc {
+      padding: 1.875rem 2.1875rem;
+      color: #305F6D;
+      font: 400 1.25rem/2.375rem Roboto, sans-serif;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2.1875rem;
+        width: 1rem;
+        height: 1rem;
+        background: url("../img/arrow.svg") 50% 50% no-repeat;
+        background-size: contain;
+        display: block;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+      .active &:after {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+    }
+    &-content {
+      padding: 0 2.1875rem;
+      background: #fff;
+      font: 400 0.8125rem/1.25rem Roboto, sans-serif;
+      transition: all 0.3s ease;
+      height: 0;
+      overflow: hidden;
+      .active & {
+        height: auto;
+        padding: 1.875rem 2.1875rem;
+      }
+    }
+  }
+}

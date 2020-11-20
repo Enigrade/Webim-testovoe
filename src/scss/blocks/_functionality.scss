@@ -1,0 +1,129 @@
+.functionality {
+  background: linear-gradient(to bottom, #f6fbfd 0%,#ffffff 100%);
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title-h2 {
+    margin-bottom: 2.25rem;
+  }
+  &__advantages {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-item {
+      width: calc(100% / 4 - 2.5rem);
+      text-align: center;
+      @media (max-width: 800px) {
+        width: calc(100% / 2 - 2.5rem);
+        margin-bottom: 2.5rem;
+      }
+      @media (max-width: 360px) {
+        width: calc(100%);
+        margin-bottom: 15px;
+      }
+      &-icon {
+        height: 10rem;
+        margin-bottom: 1.625rem;
+        @media (max-width: 800px) {
+          height: auto;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0rem 1.6875rem 5rem rgba(25, 141, 203, 0.07), 0rem 0.376925rem 1.1168125rem rgba(25, 141, 203, 0.0417275), 0rem 0.112220625rem 0.332505rem rgba(25, 141, 203, 0.0282725);
+    border-radius: 15px;
+    margin-top: 3.75rem;
+    padding: 3.75rem 4rem;
+    text-align: left;
+    &-image, &-questions {
+      width: calc(100% / 2 - 30px);
+    }
+    &-image {
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+    &-questions {
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+    &-question {
+      width: 100%;
+      display: block;
+      margin-top: 1.75rem;
+    }
+    &-desc {
+      color: #305F6D;
+      font: 400 18px/25px Roboto, sans-serif;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+    &-radios {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    &-radio {
+      margin-right: 0.9375rem;
+      width: auto;
+      &:last-child {
+        margin-right: 0;
+      }
+      label {
+        color: #8CA0A6;
+        font: 400 0.875rem/2rem Roboto, sans-serif;
+        border-radius: 6px;
+        border: 1px solid #D6E8F0;
+        text-align: center;
+        //height: 2.1875rem;
+        padding: 0.3125rem 1.25rem;
+        cursor: pointer;
+        display: block;
+        background-color: transparent;
+        transition: all 0.3s ease, bottom 0.1s linear;
+        position: relative;
+        bottom: 0;
+        text-align: left;
+        &:hover {
+          bottom: 2px;
+        }
+      }
+      [type="radio"] {
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+      }
+      [type="radio"]:checked + label {
+        background-color: #22CBFF;
+        border-color: #22CBFF;
+        color: #fff;
+      }
+    }
+    @media (max-width: 600px) {
+      padding: 30px;
+    }
+  }
+}

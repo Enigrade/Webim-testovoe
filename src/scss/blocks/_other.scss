@@ -1,0 +1,130 @@
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.wrap {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.75rem 5.625rem;
+  @media (max-width: 600px) {
+    padding: 60px 40px;
+  }
+}
+
+.title-h1 {
+  font: 700 2.625rem/3.28125rem Sunflower, sans-serif;
+  margin: 0;
+  margin-bottom: 0.9375rem;
+  color: #305F6D;
+  display: block;
+  width: 100%;
+}
+
+.subtitle {
+  font: 400 1rem/1.625rem Roboto, sans-serif;
+  color: #8CA0A6;
+}
+
+.title-h2 {
+  font: 400 1.75rem/1.625rem Roboto, sans-serif;
+  color: #8CA0A6;
+  text-align: center;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.title-h3 {
+  font: 700 1.75rem/2.1875rem Sunflower, sans-serif;
+  color: #305F6D;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1.8125rem;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.link {
+  font: 400 16px/26px Roboto, sans-serif;
+  color: #46B4D4;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: .65;
+  }
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 110;
+  top: 30px;
+  right: 10px;
+  &__bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #2D5AAB;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+    position: absolute;
+    .active & {
+      background-color: #000;
+    }
+    &--bar1 {
+      top: 0;
+      .active & {
+        top: 13.5px;
+        background-color: transparent;
+      }
+    }
+    &--bar2 {
+      width: 1px;
+      transform: rotate(90deg);
+      left: 13.5px;
+      top: 13.5px;
+      .active & {
+        left: 0px;
+        width: 30px;
+        transform: rotate(45deg);
+      }
+    }
+    &--bar3 {
+      width: 1px;
+      left: 13.5px;
+      top: 13.5px;
+      right: 0;
+      .active & {
+        left: 0;
+        width: 30px;
+        transform: rotate(-45deg);
+      }
+    }
+    &--bar4 {
+      top: 13.5px;
+      bottom: 0;
+      .active & {
+        background-color: transparent;
+      }
+    }
+    &--bar5 {
+      bottom: 0px;
+      .active & {
+        bottom: 13.5px;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}

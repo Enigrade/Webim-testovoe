@@ -1,0 +1,26 @@
+.footer {
+  background: #485053;
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  &__socs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    @media (max-width: 380px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__soc {
+    margin-right: 0.8125rem;
+    opacity: .4;
+    cursor: pointer;
+  }
+}
